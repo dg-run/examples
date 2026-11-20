@@ -1,0 +1,7 @@
+{
+  "name": "Basic example",
+  "short_name": "Basic",
+  "description": "A guestbook and private notes, built with plain HTML and the dg.run sign-in and database.",
+  "categories": ["example", "education"],
+  "start_url": "/"
+}

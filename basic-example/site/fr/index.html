@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exemple de base : un livre d’or avec connexion et base de données</title>
+  <meta name="description" content="Une petite application statique qui utilise la connexion et la base de données de dg.run : un livre d’or public et des notes privées.">
+  <!-- Real content and SEO tags live in the HTML itself, so crawlers see them without running any JavaScript.
+       React only takes over the interactive parts (#auth, #guestbook-app, #notes-app); the headings and text around them stay static.
+       The folder page fr/index.html is served at /fr (a link to /fr/ is redirected to /fr), so use /fr everywhere. -->
+  <link rel="canonical" href="{{ORIGIN}}/fr">
+  <link rel="alternate" hreflang="en" href="{{ORIGIN}}/">
+  <link rel="alternate" hreflang="fr" href="{{ORIGIN}}/fr">
+  <link rel="alternate" hreflang="x-default" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <!-- Absolute paths, so the same files load from / and from /fr/. The app code lives in its own folder. -->
+  <link rel="stylesheet" href="/app/style.css">
+  <script type="module" src="/app/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav><a href="/" hreflang="en">English</a></nav>
+    <div id="auth" aria-live="polite"></div>
+  </header>
+  <main>
+    <h1>Exemple de base</h1>
+    <p>Une petite application statique, en HTML simple et React, sans serveur. Elle utilise dg.run pour la connexion et le stockage des données.</p>
+
+    <section id="guestbook">
+      <h2>Livre d’or</h2>
+      <p>Tout le monde peut lire le livre d’or. Connectez-vous pour laisser un message ; vous pouvez supprimer les vôtres.</p>
+      <div id="guestbook-app"></div>
+    </section>
+
+    <section id="notes">
+      <h2>Mes notes</h2>
+      <p>Vous seul les voyez. Elles sont stockées dans la base de données, privées pour votre compte.</p>
+      <div id="notes-app"></div>
+    </section>
+
+  </main>
+  <footer><p>Construit avec la connexion et la base de données de dg.run.</p></footer>
+  <noscript><p>Cette page a besoin de JavaScript pour se connecter et charger le livre d’or.</p></noscript>
+</body>
+</html>

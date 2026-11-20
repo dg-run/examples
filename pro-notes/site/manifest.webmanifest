@@ -1,0 +1,17 @@
+{
+  "name": "Pro Notes",
+  "short_name": "Pro Notes",
+  "description": "A notes app that shows dg.run subscriptions: a free tier, a free trial, monthly and yearly plans, and a one-time lifetime purchase.",
+  "categories": ["example", "productivity"],
+  "start_url": "/",
+  "locales": {
+    "fa": {
+      "title": "پرو نوت",
+      "description": "برنامه یادداشت برای نمایش اشتراک‌ها در dg.run: سطح رایگان، دوره آزمایشی رایگان، طرح‌های ماهانه و سالانه و خرید یک‌باره مادام‌العمر."
+    },
+    "fr": {
+      "title": "Pro Notes",
+      "description": "Une application de notes qui présente les abonnements dg.run : une offre gratuite, un essai gratuit, des forfaits mensuel et annuel, et un achat unique à vie."
+    }
+  }
+}

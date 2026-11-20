@@ -1,0 +1,10 @@
+{
+  "name": "market-pwa",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pack": "npm run build && node scripts/pack.mjs"
+  }
+}

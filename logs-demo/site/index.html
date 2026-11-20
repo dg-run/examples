@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logs demo: send logs from your app with dg.log</title>
+  <meta name="description" content="A tiny app that shows dg.log: info, warning and error lines, extra data, uncaught errors, merged repeats and batches, with and without sign-in.">
+  <link rel="canonical" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/app/style.css">
+  <script type="module" src="/app/main.js"></script>
+</head>
+<body>
+  <header>
+    <strong>Logs demo</strong>
+    <div id="auth" aria-live="polite"></div>
+  </header>
+  <main>
+    <h1>Send logs from your app</h1>
+    <p>Every button below calls <code>dg.log</code>. Lines go to your dashboard: <em>My apps → Logs</em> (only approved apps show the button). Without sign-in they are marked <strong>anon</strong>; after signing in, <strong>user</strong>.</p>
+
+    <section>
+      <h2>Lines</h2>
+      <div class="row">
+        <button data-act="debug">Debug</button>
+        <button data-act="info">Info</button>
+        <button data-act="warn">Warning</button>
+        <button data-act="error">Error (with stack)</button>
+        <button data-act="data">Info with extra data</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Errors you didn't catch</h2>
+      <p>With <code>dg.log.captureErrors()</code> these are logged on their own.</p>
+      <div class="row">
+        <button data-act="uncaught">Throw an uncaught error</button>
+        <button data-act="rejection">Reject a promise nobody handles</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Repeats and batches</h2>
+      <p>Identical lines are merged into one row with a count. Lines are sent in batches (every 5 seconds, 20 at most, and when the page closes).</p>
+      <div class="row">
+        <button data-act="repeat">Send the same warning 5 times</button>
+        <button data-act="batch">Send 25 different lines</button>
+        <button data-act="flush">Send what is queued now</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Queued on this page</h2>
+      <p class="hint">What this page asked <code>dg.log</code> to send (the dashboard shows what the server kept).</p>
+      <ol id="echo" class="echo"></ol>
+    </section>
+
+    <p class="hint">Never log passwords or personal data: anyone can open your app, and anyone can try to send lines to its log. dg.run only accepts them from your app's own pages and limits how many arrive, but it can't prove a line came from your real code. Treat logs as hints.</p>
+  </main>
+</body>
+</html>

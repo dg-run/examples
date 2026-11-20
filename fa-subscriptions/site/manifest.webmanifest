@@ -1,0 +1,9 @@
+{
+  "name": "طرح‌های اشتراک",
+  "short_name": "اشتراک",
+  "description": "نمونه‌ی فارسی فروش اشتراک با dg.run: انتخاب طرح، پرداخت در dg.run و بررسی دسترسی در برنامه.",
+  "lang": "fa",
+  "dir": "rtl",
+  "categories": ["example", "productivity"],
+  "start_url": "/"
+}

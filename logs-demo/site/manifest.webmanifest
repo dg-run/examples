@@ -1,0 +1,7 @@
+{
+  "name": "Logs demo",
+  "short_name": "Logs demo",
+  "description": "Shows how an app sends logs to its owner's dashboard with dg.log: levels, extra data, errors, merged repeats and batches.",
+  "categories": ["example", "developer tools"],
+  "start_url": "/"
+}

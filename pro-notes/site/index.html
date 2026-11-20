@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pro Notes: a dg.run subscriptions example</title>
+  <meta name="description" content="A small notes app that shows how to sell plans with dg.run: a free tier, a free trial, a monthly subscription and a one-time purchase.">
+  <link rel="canonical" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/app/style.css">
+  <script type="module" src="/app/main.js"></script>
+</head>
+<body>
+  <header>
+    <strong>Pro Notes</strong>
+    <div id="auth" aria-live="polite"></div>
+  </header>
+  <main>
+    <div id="banner" aria-live="polite"></div>
+    <h1>Pro Notes</h1>
+    <p>Free: keep up to 3 private notes. With a plan: unlimited notes and export. Everything below is driven by the plans you create in the dg.run dashboard.</p>
+
+    <section id="plan-status"><h2>Your plan</h2><div id="status-app"></div></section>
+    <section id="notes"><h2>My notes</h2><div id="notes-app"></div></section>
+    <section id="pricing"><h2>Plans</h2><div id="plans-app"></div></section>
+  </main>
+  <footer><p>Built with the dg.run sign-in, database and subscriptions.</p></footer>
+  <noscript><p>This page needs JavaScript.</p></noscript>
+</body>
+</html>

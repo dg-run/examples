@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tally: count anything, offline</title>
+  <meta name="description" content="Tally is a tiny counter app. Install it to get its own window and use it without a connection.">
+  <meta name="theme-color" content="#00747c">
+  <link rel="canonical" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/shared.css">
+  <link rel="stylesheet" href="/market.css">
+</head>
+<body>
+  <!-- This is the page people see at the address. The installed app never shows it: it starts at /app (see manifest.webmanifest). -->
+  <main>
+    <div class="hero">
+      <img src="/icons/icon-192.png" width="96" height="96" alt="">
+      <div>
+        <h1>Tally</h1>
+        <p class="tag">Count anything. Your counts stay on your device, even offline.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <button id="install" class="btn" type="button">Install Tally</button>
+      <a id="browser" class="btn ghost" href="/app">Use it in the browser</a>
+    </div>
+
+    <div id="hint" class="panel" hidden><p id="hint-text"></p></div>
+    <div id="done" class="panel" hidden><p>Tally is installed on this device. Open it from your app list or home screen. <a href="/app">Or use it here in the browser.</a></p></div>
+
+    <ul class="facts">
+      <li><strong>Its own window</strong>It opens like any other app, with its own icon, not in a browser tab.</li>
+      <li><strong>Works offline</strong>Everything it needs is saved on your device the first time you open it.</li>
+      <li><strong>Private</strong>Your counters never leave this device. There is no account.</li>
+    </ul>
+
+    <p class="note">
+      For developers: this page lives at <code>/</code> and asks for the install. The app is a separate page in <code>/app</code>;
+      once installed, it always starts there, so installed users never see this page.
+    </p>
+  </main>
+  <script src="/market.js"></script>
+</body>
+</html>

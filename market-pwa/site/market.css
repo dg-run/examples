@@ -1,0 +1,14 @@
+main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.hero { display: flex; gap: 1.25rem; align-items: center; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; box-shadow: 0 6px 20px rgba(0, 0, 0, .18); }
+h1 { margin: 0; font-size: 2rem; line-height: 1.15; }
+.tag { margin: .25rem 0 0; color: var(--muted); }
+.cta { margin: 1.75rem 0 .5rem; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.panel { margin-top: 1rem; padding: 1rem 1.1rem; border-radius: 12px; background: var(--soft); }
+.panel[hidden] { display: none; }
+.panel p { margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .75rem; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+.facts li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; }
+.facts strong { display: block; margin-bottom: .2rem; }
+.note { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+code { background: var(--card); padding: .1rem .35rem; border-radius: 6px; }

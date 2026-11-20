@@ -1,0 +1,15 @@
+.bar { background: var(--soft); padding: .6rem 1rem; text-align: center; font-size: .9rem; }
+.bar[hidden] { display: none; }
+main { max-width: 34rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+h1 { margin: 0 0 1rem; }
+.add { display: flex; gap: .5rem; }
+.add input { flex: 1; min-width: 0; font: inherit; padding: .75rem 1rem; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--fg); }
+.list { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: .75rem; }
+.item { display: grid; grid-template-columns: 1fr auto; gap: .25rem .75rem; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .9rem 1rem; }
+.item .label { font-weight: 600; overflow-wrap: anywhere; }
+.item .count { grid-row: span 2; font-size: 2.5rem; font-variant-numeric: tabular-nums; font-weight: 700; text-align: end; min-width: 3ch; }
+.item .row { display: flex; gap: .5rem; align-items: center; }
+.item button { border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 10px; width: 3rem; height: 2.75rem; font-size: 1.4rem; }
+.item button.plus { background: var(--brand); color: var(--brand-fg); border-color: var(--brand); }
+.item button.del { width: auto; padding: 0 .75rem; font-size: .85rem; color: var(--muted); margin-inline-start: auto; }
+.empty { color: var(--muted); margin-top: 1.5rem; }

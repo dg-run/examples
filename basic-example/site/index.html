@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic example: a guestbook with sign-in and a database</title>
+  <meta name="description" content="A tiny static app that uses dg.run sign-in and its built-in database: a public guestbook and private notes.">
+  <!-- Real content and SEO tags live in the HTML itself, so crawlers see them without running any JavaScript.
+       React only takes over the interactive parts (#auth, #guestbook-app, #notes-app); the headings and text around them stay static.
+       The folder page fr/index.html is served at /fr (a link to /fr/ is redirected to /fr), so use /fr everywhere. -->
+  <link rel="canonical" href="{{ORIGIN}}/">
+  <link rel="alternate" hreflang="en" href="{{ORIGIN}}/">
+  <link rel="alternate" hreflang="fr" href="{{ORIGIN}}/fr">
+  <link rel="alternate" hreflang="x-default" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <!-- Absolute paths, so the same files load from / and from /fr. The app code lives in its own folder. -->
+  <link rel="stylesheet" href="/app/style.css">
+  <script type="module" src="/app/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav><a href="/fr" hreflang="fr">Français</a></nav>
+    <div id="auth" aria-live="polite"></div>
+  </header>
+  <main>
+    <h1>Basic example</h1>
+    <p>A tiny static app, plain HTML and React, with no server of its own. It uses dg.run for sign-in and for storing data.</p>
+
+    <section id="guestbook">
+      <h2>Guestbook</h2>
+      <p>Anyone can read the guestbook. Sign in to leave a message; you can delete your own.</p>
+      <div id="guestbook-app"></div>
+    </section>
+
+    <section id="notes">
+      <h2>My notes</h2>
+      <p>Only you can see these. They are stored in the database, private to your account.</p>
+      <div id="notes-app"></div>
+    </section>
+
+  </main>
+  <footer><p>Built with the dg.run sign-in and database.</p></footer>
+  <noscript><p>This page needs JavaScript to sign in and load the guestbook.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tally</title>
+  <meta name="theme-color" content="#00747c">
+  <meta name="robots" content="noindex">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/shared.css">
+  <link rel="stylesheet" href="/app/app.css">
+</head>
+<body>
+  <!-- The app itself. Installed, this is the only page people see. In a browser tab, a slim bar offers the install (on the store page at "/"). -->
+  <div id="bar" class="bar" hidden>You’re using Tally in the browser. <a href="/">Install it</a> for its own window.</div>
+  <main>
+    <h1>Tally</h1>
+    <form id="add" class="add">
+      <input id="name" name="name" placeholder="What are you counting?" maxlength="40" autocomplete="off" aria-label="Name of a new counter" required>
+      <button class="btn" type="submit">Add</button>
+    </form>
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty" hidden>Nothing yet. Add a counter above: cups of coffee, laps, pages read…</p>
+  </main>
+  <script src="/app/app.js"></script>
+</body>
+</html>

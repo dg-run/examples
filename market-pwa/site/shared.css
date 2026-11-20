@@ -1,0 +1,19 @@
+:root {
+  --bg: #ffffff; --fg: #14202b; --muted: #5b6b78; --card: #f3f7f8; --line: #dbe5e8; --brand: #00747c; --brand-fg: #fff; --soft: #e1f2f3;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1a20; --fg: #e8f0f2; --muted: #9db0b9; --card: #16262e; --line: #25414c; --brand: #2cc0c9; --brand-fg: #06242a; --soft: #12353a; }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; } /* classes below set display, which would otherwise beat the hidden attribute */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+a { color: var(--brand); }
+button { font: inherit; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border: 0; border-radius: 12px; padding: .8rem 1.4rem;
+  background: var(--brand); color: var(--brand-fg); font-weight: 600; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--brand); border: 1px solid var(--line); }
+.btn:disabled { opacity: .55; cursor: default; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }

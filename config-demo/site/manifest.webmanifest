@@ -1,0 +1,13 @@
+{
+  "name": "Config demo",
+  "short_name": "Config demo",
+  "description": "Shows remote config with dg.config: settings declared in the manifest, changed from the dashboard and applied live, kept on the device for offline use.",
+  "categories": ["example", "developer tools"],
+  "start_url": "/",
+  "config": {
+    "banner": { "default": "Welcome to the config demo", "label": "Banner text", "description": "Shown at the top of the page.", "maxLength": 80 },
+    "maintenance": { "default": false, "label": "Maintenance mode", "description": "Replaces the page with a notice while you work on something." },
+    "theme": { "default": "light", "label": "Theme", "options": ["light", "dark", "sepia"] },
+    "cards": { "default": 6, "label": "How many cards", "description": "A number with limits: the form only accepts 1 to 24.", "min": 1, "max": 24 }
+  }
+}

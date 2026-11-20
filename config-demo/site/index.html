@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Config demo: remote config with dg.config</title>
+  <meta name="description" content="A tiny app that shows dg.config: settings declared in the web manifest, changed from the dashboard, applied live and kept on the device for offline use.">
+  <link rel="canonical" href="{{ORIGIN}}/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/app/style.css">
+  <script type="module" src="/app/main.js"></script>
+</head>
+<body>
+  <p id="banner" class="banner" aria-live="polite"></p>
+  <div id="maintenance" class="maintenance" hidden>
+    <h1>Back soon</h1>
+    <p>We are doing some maintenance. This notice is switched on from the dashboard (setting <code>maintenance</code>), without a new upload.</p>
+  </div>
+  <main id="app">
+    <h1>Remote config</h1>
+    <p>Everything on this page is driven by four settings declared in <code>manifest.webmanifest</code>. Change them in <em>My apps → Config</em> and watch this page follow, without reloading.</p>
+
+    <section>
+      <h2>Right now</h2>
+      <dl class="status">
+        <dt>Connection</dt><dd id="conn">…</dd>
+        <dt>Last update</dt><dd id="last">from this device's saved copy, or the defaults in the code</dd>
+        <dt>Settings</dt><dd><code id="values"></code></dd>
+      </dl>
+      <div class="row"><button id="refresh">Check for changes now</button></div>
+    </section>
+
+    <section>
+      <h2>The cards</h2>
+      <p class="hint">The setting <code>cards</code> decides how many appear (1 to 24).</p>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section>
+      <h2>What changed</h2>
+      <ol id="echo" class="echo"></ol>
+    </section>
+
+    <p class="hint">Config values are public: every visitor can read them, so never put secrets here. The last values are kept in this browser, so an installed app starts with them even without internet. Try it: load the page, go offline, reload.</p>
+  </main>
+</body>
+</html>
